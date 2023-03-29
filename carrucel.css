@@ -1,0 +1,10 @@
+#carrucel {
+    margin: 7em 0em 0em 0em;
+}
+
+
+@media screen and (max-width:980px){
+    #carrucel {
+        margin: -28em 0em 0em 0em;
+    }
+}
