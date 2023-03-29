@@ -1,0 +1,167 @@
+/*IMPORT*/
+  @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap');
+
+body {
+    background: #000;
+    color: white;
+}
+
+.title {
+    margin: 2em 0em 0em 3em;
+}
+.title h1 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 9em;
+}
+
+
+.contenedor {
+    display: flex;
+}
+
+
+.texto {
+    margin: 5em 0em 0em 42em;
+    position: absolute;
+}
+
+.texto p {
+    font-size: 14px;
+}
+
+
+.future {
+    margin: 22em 0em 0em 5em;
+    opacity: 0.1;
+}
+
+.future-t {
+    font-family: 'Kanit', sans-serif;
+    font-size: 17em;
+    -webkit-text-stroke: 2px grey;
+    color: transparent;
+    letter-spacing: 12px;
+}
+
+.future-phone{
+    display: none;
+}
+
+a {
+    color: white !important;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+
+.navbar {
+    background: #000;
+}
+
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+    color:white !important;
+}
+
+.navbar-brand {
+    margin-left: 2em;
+}
+
+ul{
+    margin-left: 60%;
+}
+
+
+
+li {
+    margin: 0em 1em 0em 0em;
+
+}
+
+
+@media screen and (max-width:980px){
+   
+    .eth {
+        display: none;
+    }
+
+    .etherium
+    {
+        display: none;
+    }
+
+    .etherium2 
+    {
+        display: none;
+    }
+    
+    .space
+    {
+        display: none;
+    }
+   
+    .navbar-brand {
+        margin-left: 0 !important;
+    }
+
+    .future-phone {
+        margin: -1em 0em 0em 15em;
+        display: block;
+        opacity: 0.1;
+    }
+
+    .future-phone-t {
+        font-family: 'Kanit', sans-serif;
+        font-size: 10em;
+        -webkit-text-stroke: 2px grey;
+        color: transparent;
+        letter-spacing: 12px;
+    }
+
+    ul {
+        margin: 0em 3em 0em 0em;
+    }
+
+    .navbar-toggler {
+        filter: invert(100%);
+    }
+
+    .title {
+        margin: 2em 0em 0em 3em !important;
+    }
+
+    .title h1 {
+        font-size: 5em !important;
+        margin: 0em 0em 0em -30px !important;
+
+    }
+
+    .texto {
+        margin: 16em 0em 0em -19em !important;
+    }
+
+    .texto p {
+        font-size: 16px !important;
+        margin-top: 4em !important;
+        margin-left: 20em !important;
+    }
+
+
+
+    .future {
+        display: none;
+        /* margin: -36em 0em 0em 13em !important; */
+    }
+/* 
+    .future-t {
+        
+    position: inherit !important;
+
+        font-size: 13em !important;
+        letter-spacing: -8px !important;
+        transform: rotate(90deg) !important;
+    } */
+}
+
+
+/**/
+
