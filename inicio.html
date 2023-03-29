@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CryptoMap</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="estilo-c.css">
+  <link rel="stylesheet" href="eth.css">
+  <link rel="stylesheet" href="carrucel.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light ">
+  <a class="navbar-brand" href="#">CryptoMap</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Cryptos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Estado</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown link
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+ <section>
+<div class="contenedor">
+
+<Div class="title">
+    <h1 id="machine-text"></h1>
+</Div>
+
+<div class="texto">
+    <p>Si eres un entusiasta de las criptomonedas o simplemente estás interesado en aprender<br> 
+      más sobre ellas, no puedes perderte la página web que te presento. Esta plataforma<br>
+      ofrece una gran cantidad de información actualizada y relevante sobre el mundo de las criptos,<br> desde noticias y análisis hasta gráficos y datos en tiempo real.</p>
+</div>
+
+    </div>
+
+</section>
+
+<div class="future">
+  <h1 class="future-t">FUTURE</h1>
+</div>
+
+<div class="future-phone">
+  <h1 class="future-phone-t">F<br>U<br>T<br>U<br>R<br>E</h1>
+</div>
+
+<section class="eth">
+  <div class="etherium">
+    <h1 class="etherium-E">E<br>T<br>H</h1>
+  </div>
+  <div class="etherium2">
+    <h1 class="etherium-E">E<br>T<br>H</h1>
+  </div>
+  <div id="space">
+    <div class="elogo">
+           <div class="trif u1"></div>
+           <div class="trif u2"></div>
+           <div class="trif u3"></div>
+           <div class="trif u4"></div>
+           <div class="ct"></div>
+           <div class="trif l1"></div>
+           <div class="trif l4"></div>
+    </div>
+</div>
+</section>
+
+<section class="carrucel">
+  <div id="carrucel" class="swiffy-slider slider-item-show4 slider-nav-outside slider-nav-dark slider-nav-sm slider-nav-visible slider-nav-page slider-item-snapstart slider-nav-autoplay slider-nav-autopause slider-item-ratio slider-item-ratio-contain slider-item-ratio-32x9 py-3 py-lg-4" data-slider-nav-autoplay-interval="2000">
+    <div class="slider-container">
+    </div>
+
+    <button type="button" class="slider-nav" aria-label="Go left"></button>
+    <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+
+</div>
+</section>
+
+<script>
+const url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false";
+
+fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        const container = document.querySelector(".slider-container");
+        data.forEach(crypto => {
+            const div = document.createElement("div"); // Crear un nuevo elemento div para cada criptomoneda
+            div.classList.add("crypto"); // Establecer una clase para el div
+            const imgEl = document.createElement("img"); // Crear el elemento img para la imagen de la criptomoneda
+            imgEl.setAttribute("src", crypto.image); // Establecer el atributo src para la URL de la imagen
+            div.appendChild(imgEl); // Agregar la imagen dentro del div
+            container.appendChild(div); // Agregar el div con la imagen dentro del contenedor
+        });
+    })
+    .catch(error => console.log(error));
+
+</script>
+
+
+
+
+
+<style>
+  #machine-text {
+  position: absolute;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid;
+  animation: typing 5s steps(30), blink .5s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: white }
+}
+</style>
+
+<script>
+const texts = ["THE<br>FUTURE.", "IS<br>CRIPTO."];
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
+
+(function type() {
+  if (count === texts.length) {
+    count = 0;
+  }
+  currentText = texts[count];
+  letter = currentText.slice(0, ++index);
+
+  document.getElementById("machine-text").innerHTML = letter;
+
+  if (letter.length === currentText.length) {
+    count++;
+    index = 0;
+  }
+
+  setTimeout(type, 200);
+}());
+</script>
+
+</body>
+</html>
